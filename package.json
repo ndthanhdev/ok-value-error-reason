@@ -1,12 +1,16 @@
 {
 	"name": "ok-value-error-reason",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "dist/umd/index.js",
 	"module": "dist/esm/index.mjs",
-	"repository": "git@github.com:ndthanhdev/ok-value-error-reason.git",
 	"author": "ndthanhdev <ndthanhdev@outlook.com>",
 	"license": "MIT",
 	"packageManager": "yarn@3.2.0",
+	"homepage": "https://github.com/ndthanhdev/ok-value-error-reason.git",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ndthanhdev/ok-value-error-reason.git"
+	},
 	"keywords": [
 		"try",
 		"trycatch",
