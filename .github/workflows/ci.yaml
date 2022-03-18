@@ -1,0 +1,25 @@
+on:
+  - push
+  - pull_request
+
+name: test & build
+
+jobs:
+  build-n-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["lts/*", "latest"]
+
+    name: build & test node ${{ matrix.node-version }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          check-latest: true
+          cache: "yarn"
+      - run: yarn install
+      - run: yarn test
+      - name: yarn build
