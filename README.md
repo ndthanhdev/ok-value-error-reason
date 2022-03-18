@@ -1,6 +1,6 @@
 # ok-value-error-reason
 
-[![npm version](https://img.shields.io/npm/v/axios.svg?style=flat-square)](https://www.npmjs.org/package/ok-value-error-reason)
+[![npm version](https://img.shields.io/npm/v/ok-value-error-reason.svg?style=flat-square)](https://www.npmjs.org/package/ok-value-error-reason)
 
 An elegant way to handle exceptions from both synchronous and asynchronous functions.
 
