@@ -1,0 +1,6 @@
+{
+	"extends": "./misc/esm.tsconfig.json",
+	"compilerOptions": {
+		"module": "UMD"
+	}
+}

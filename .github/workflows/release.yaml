@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "The branch, tag or SHA to checkout"
+        required: true
+        default: "main"
+
+jobs:
+  release:
+    name: Releasing ${{ github.event.inputs.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.ref }}
+
+      - name: Install dependencies
+        uses: actions/setup-node@v3
+
+      - run: yarn install
+      - run: yarn test
+      - run: yarn build
+
+      # Set delivery info
+
+      # Delivery to NPM
+      - shell: pwsh
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn config set npmAuthToken "$env:NPM_TOKEN"
+
+      - run: yarn npm publish
