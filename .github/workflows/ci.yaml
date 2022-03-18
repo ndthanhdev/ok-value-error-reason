@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ["lts/*", "latest"]
+        node-version: ["lts/*", "17"]
 
     name: build & test node ${{ matrix.node-version }}
     steps:
