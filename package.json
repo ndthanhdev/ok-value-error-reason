@@ -7,6 +7,14 @@
 	"author": "ndthanhdev <ndthanhdev@outlook.com>",
 	"license": "MIT",
 	"packageManager": "yarn@3.2.0",
+	"keywords": [
+		"try",
+		"trycatch",
+		"async",
+		"ok",
+		"value",
+		"reason"
+	],
 	"scripts": {
 		"test": "jest -c jest.config.js",
 		"build": "tsc -p misc/esm.tsconfig.json && tsc -p misc/umd.tsconfig.json"
