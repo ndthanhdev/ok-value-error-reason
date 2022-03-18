@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json.schemastore.org/tsconfig",
+
+	"compilerOptions": {
+		/* Language and Environment */
+		"target": "es2016",
+
+		/* Modules */
+		"module": "ES2020",
+
+		/* JavaScript Support */
+
+		/* Emit */
+		"outDir": "../dist/esm",
+		"declaration": true,
+
+		/* Interop Constraints */
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+
+		/* Type Checking */
+		"strict": true,
+
+		/* Completeness */
+		"skipLibCheck": true
+	},
+
+	"include": ["../src/**/*"],
+	"exclude": ["../src/**/*.snap.ts"]
+}
