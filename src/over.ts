@@ -20,10 +20,10 @@ function over<TValue = any, TReason = unknown>(
 	: OVER<TValue, TReason>;
 function over<TFn extends Fn = Fn, TReason = unknown>(
 	fn: TFn,
-	...params: Parameters<TFn>
-): ReturnType<TFn> extends Promise<infer TPValue>
+	...params: Parameters<typeof fn>
+): ReturnType<typeof fn> extends Promise<infer TPValue>
 	? AsyncOVER<TPValue, TReason>
-	: OVER<ReturnType<TFn>, TReason>;
+	: OVER<ReturnType<typeof fn>, TReason>;
 function over(fn: Fn<any>, ...params: Parameters<typeof fn>): any {
 	try {
 		let temp = fn(...params);
