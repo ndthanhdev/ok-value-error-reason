@@ -22,4 +22,4 @@ jobs:
           cache: "yarn"
       - run: yarn install
       - run: yarn test
-      - name: yarn build
+      - run: yarn build
