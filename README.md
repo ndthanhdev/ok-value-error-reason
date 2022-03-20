@@ -11,8 +11,8 @@ import {
 	over, // stand for 'ok-value-error-reason'
 } from "ok-value-error-reason";
 
-let re = over<typeof fnReturnString, "EMPTY" | "TOO_LONG">(
-	fnReturnString,
+let re = over<typeof fnReturnNumber, "EMPTY" | "TOO_LONG">(
+	fnReturnNumber,
 	arg1,
 );
 
@@ -23,8 +23,8 @@ if (re.ok) {
 }
 
 // async
-let asyncRe = await over<typeof asyncFnReturnString, "EMPTY" | "TOO_LONG">(
-	fnReturnString,
+let asyncRe = await over<typeof asyncFnReturnNumber, "EMPTY" | "TOO_LONG">(
+	asyncFnReturnNumber,
 	arg1,
 );
 ```
