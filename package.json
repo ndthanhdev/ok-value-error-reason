@@ -5,7 +5,7 @@
 	"module": "dist/esm/index.mjs",
 	"author": "ndthanhdev <ndthanhdev@outlook.com>",
 	"license": "MIT",
-	"packageManager": "yarn@3.2.0",
+	"packageManager": "yarn@3.2.3",
 	"homepage": "https://github.com/ndthanhdev/ok-value-error-reason.git",
 	"repository": {
 		"type": "git",
