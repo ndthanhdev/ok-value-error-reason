@@ -1,8 +1,8 @@
 {
 	"name": "ok-value-error-reason",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"main": "dist/umd/index.js",
-	"module": "dist/esm/index.mjs",
+	"module": "dist/esm/index.js",
 	"author": "ndthanhdev <ndthanhdev@outlook.com>",
 	"license": "MIT",
 	"packageManager": "yarn@3.2.3",
