@@ -8,4 +8,5 @@ module.exports = {
     ".spec.(ts|tsx)": "dts-jest/transform",
     ".(ts|tsx)": "ts-jest",
   },
+  collectCoverage: true,
 };
