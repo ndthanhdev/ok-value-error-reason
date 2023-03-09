@@ -1,4 +1,4 @@
-name: test & build
+name: CI
 
 on:
   - push
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ["lts/*", "17"]
+        node-version: ["lts/*", "*"]
 
     name: build & test node ${{ matrix.node-version }}
     steps:
