@@ -10,7 +10,21 @@ export type ErrorReason<R> = {
 export type OVER<V, E> = OKValue<V> | ErrorReason<E>;
 export type AsyncOVER<V, E> = Promise<OVER<V, E>>;
 
-type Fn<V = any> = (...args: any[]) => V;
+export type Fn<V = any> = (...args: any[]) => V;
+
+const createOK = <V>(result: V): OKValue<V> => {
+	return {
+		ok: true,
+		value: result,
+	};
+};
+
+const createError = <R>(reason: R): ErrorReason<R> => {
+	return {
+		ok: false,
+		reason,
+	};
+};
 
 function over<TValue = any, TReason = unknown>(
 	fn: Fn<TValue>,
@@ -31,18 +45,8 @@ function over(fn: Fn<any>, ...params: Parameters<typeof fn>): any {
 		if (temp instanceof Promise) {
 			// @ts-ignore
 			return temp
-				.then((result) => {
-					return {
-						ok: true,
-						value: result,
-					};
-				})
-				.catch((reason) => {
-					return {
-						ok: false,
-						reason,
-					};
-				});
+				.then((result) => createOK(result))
+				.catch((reason) => createError(reason));
 		}
 
 		// @ts-ignore
@@ -58,4 +62,4 @@ function over(fn: Fn<any>, ...params: Parameters<typeof fn>): any {
 	}
 }
 
-export { over };
+export { over, createOK, createError };
