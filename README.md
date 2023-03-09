@@ -1,6 +1,6 @@
 # ok-value-error-reason
 
-[![npm version](https://img.shields.io/npm/v/ok-value-error-reason.svg?style=flat-square)](https://www.npmjs.org/package/ok-value-error-reason)
+[![npm version](https://img.shields.io/npm/v/ok-value-error-reason.svg)](https://www.npmjs.org/package/ok-value-error-reason) [![CI](https://github.com/ndthanhdev/ok-value-error-reason/actions/workflows/build-n-test.yaml/badge.svg)](https://github.com/ndthanhdev/ok-value-error-reason/actions/workflows/build-n-test.yaml)
 
 An elegant way to handle exceptions from both synchronous and asynchronous functions.
 
